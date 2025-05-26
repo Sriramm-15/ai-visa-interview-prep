@@ -5,7 +5,8 @@ body, html {
   padding: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
-  background: url('images/visa officer.jpg') no-repeat center center fixed;
+  /* CHANGED HERE: No 'public/' prefix and filename updated */
+  background: url('images/visa-officer.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
   display: flex;
@@ -139,7 +140,8 @@ button:hover {
   color: #ffbd59;
   min-height: 80px;
   box-shadow: 0 0 8px rgba(255, 189, 89, 0.5);
-  white-space: pre-wrap;
+  /* Make sure this is set, or remove if .feedback-content is used */
+  white-space: pre-wrap; /* KEEP this on .feedback if you remove .feedback-content div in JS */
 }
 
 ul {
@@ -157,10 +159,32 @@ body {
 }
 
 footer {
-  background: linear-gradient(to right, #002244, #005f73);  
+  background: linear-gradient(to right, #002244, #005f73); 
   color: #ffffff;
   text-align: center;
   padding: 1rem 2rem; /* 1rem top/bottom, 2rem left/right */
   margin-top: auto;
 }
 
+/* Add this to your styles.css file */
+
+.improvements-button-container {
+    margin-top: 15px; /* Space between feedback and button */
+    text-align: center;
+}
+
+#viewImprovementsBtn {
+    background: #007bff; /* A nice blue */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.4);
+    transition: background 0.3s ease;
+}
+
+#viewImprovementsBtn:hover {
+    background: #0056b3;
+}
