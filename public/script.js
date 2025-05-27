@@ -330,7 +330,7 @@ async function endInterview() {
 // Renamed and updated API call function
 async function getGeminiFeedback(questions, answers, tuitionFee, livingExpenses, fundingAmount, universityName) {
     console.log("Sending feedback request to backend...");
-    const response = await fetch("http://localhost:3000/api/feedback", {
+    const response = await fetch("/api/feedback", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

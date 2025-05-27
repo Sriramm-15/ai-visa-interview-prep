@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI-powered F1 Visa interview preparation assistant. Practice interview questions and get feedback." />
   <title>F1 Visa AI Interview Prep 🇺🇸</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -12,31 +13,32 @@
       <h1 style="font-size: 1.5rem;">Say Hello to <span class="highlight">VisaBuddy🤖👋</span></h1>
       <p class="subtext">(AI-Powered F1 Visa Assistant)</p>
       <div class="button-group">
-        <button id="resources-btn">📘 Resources</button>
-        <button id="start-interview-btn">🎤 Start Interview</button>
+        <button id="resources-btn" type="button">📘 Resources</button>
+        <button id="start-interview-btn" type="button">🎤 Start Interview</button>
       </div>
     </div>
 
     <div id="resources" class="view">
-    <h2>📘 Tips for a Successful Visa Interview After a Refusal Attempt</h2>
-    <ul>
-      <li>✅ Review your previous refusal reason and be ready to explain what has changed</li>
-      <li>✅ Ensure your updated DS-160 confirmation page is accurate and error-free</li>
-      <li>✅ Have your new I-20 and SEVIS Fee Receipt (if applicable)</li>
-      <li>✅ Show stronger or clearer financial documentation to address previous concerns</li>
-      <li>✅ Practice confident and composed answers—learn from past mistakes</li>
-      <li>✅ Dress formally, arrive early, and maintain positive body language</li>
-      <li>✅ Be fully prepared to explain your course, university choice, and funding clearly</li>
-      <li>✅ Keep your answers honest, consistent, and to the point</li>
-    </ul>
+      <h2>📘 Tips for a Successful Visa Interview After a Refusal Attempt</h2>
+      <ul>
+        <li>✅ Review your previous refusal reason and be ready to explain what has changed</li>
+        <li>✅ Ensure your updated DS-160 confirmation page is accurate and error-free</li>
+        <li>✅ Have your new I-20 and SEVIS Fee Receipt (if applicable)</li>
+        <li>✅ Show stronger or clearer financial documentation to address previous concerns</li>
+        <li>✅ Practice confident and composed answers—learn from past mistakes</li>
+        <li>✅ Dress formally, arrive early, and maintain positive body language</li>
+        <li>✅ Be fully prepared to explain your course, university choice, and funding clearly</li>
+        <li>✅ Keep your answers honest, consistent, and to the point</li>
+      </ul>
 
-    <h3>📄 Downloadable Guides (PDF)</h3>
-    <ul>
-      <li>📎 <a href="pdfs/VISA_QUESTIONS.pdf" target="_blank">Visa Preparation Guide</a>
-      <li>📎 <a href="f1-refused-attempt-interview-experiences.html" target="_blank" rel="noopener noreferrer">F1 Refused Interview Questions</a></li>
-    </ul>
-    <button id="back-from-resources">⬅ Back</button>
-  </div>
+      <h3>📄 Downloadable Guides (PDF)</h3>
+      <ul>
+        <li>📎 <a href="pdfs/VISA_QUESTIONS.pdf" target="_blank" rel="noopener noreferrer">Visa Preparation Guide</a></li>
+        <li>📎 <a href="f1-refused-attempt-interview-experiences.html" target="_blank" rel="noopener noreferrer">F1 Refused Interview Questions</a></li>
+      </ul>
+      <button id="back-from-resources" type="button">⬅ Back</button>
+    </div>
+
     <div id="interview" class="view">
       <div class="header">
         <h1>F1 Visa Interview Buddy</h1>
@@ -44,33 +46,37 @@
       </div>
       <div class="chat-box" id="chat-box"></div>
       <div class="input-area">
-        <label for="user-input" id="input-label">Type your answer here or use voice recorder...</label>
-        <textarea id="user-input" rows="2" placeholder="Type your answer here..."></textarea>
+        <label for="user-input" id="input-label">Type your answer here:</label>
+        <textarea id="user-input" rows="2" placeholder="Type your answer here..." aria-describedby="voice-instructions"></textarea>
+        <p id="voice-instructions">Or use the voice recorder buttons below.</p>
         <div class="buttons">
-          <button id="start-rec-btn" title="Start recording">🎙️ Start Recording</button>
-          <button id="stop-rec-btn" title="Stop recording" disabled>⏹️ Stop Recording</button>
-          <button id="submit-btn">Submit Answer</button>
+          <button id="start-rec-btn" type="button" title="Start recording">🎙️ Start Recording</button>
+          <button id="stop-rec-btn" type="button" title="Stop recording" disabled>⏹️ Stop Recording</button>
+          <button id="submit-btn" type="button">Submit Answer</button>
         </div>
       </div>
       <div id="feedback" class="feedback"></div>
-      <button id="back-from-interview">⬅ Back</button>
+      <button id="back-from-interview" type="button">⬅ Back</button>
     </div>
   </div>
-<div id="loginModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; align-items:center; justify-content:center;">
-  <div style="background:#fff; padding:2rem; border-radius:10px; max-width:400px; width:90%;">
-    <h2>Enter University Name to Start Interview</h2>
-    <input type="text" id="universityNameInput" placeholder="Your University Name" style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
-    <button id="loginSubmitBtn" style="background:#002244; color:#fff; padding:0.5rem 1rem; border:none; border-radius:5px; cursor:pointer;">Start Interview</button>
-  </div>
-</div>
-   <script src="https://cdn.counter.dev/script.js" 
-             data-id="9ddc8272-31df-42c6-8534-4207c1bddfb9" 
-             data-utcoffset="6">
-    </script>
 
-    <script src="script.js"></script>
-<footer>
-    <p> © 2025 AI VISA Interview Prep. Made with 💖 by Sri Ram</p>
+  <div id="loginModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:1000; display:flex; align-items:center; justify-content:center;">
+    <div style="background:#fff; padding:2rem; border-radius:10px; max-width:400px; width:90%;">
+      <h2>Enter University Name to Start Interview</h2>
+      <input type="text" id="universityNameInput" placeholder="Your University Name" style="width:100%; padding:0.5rem; margin-bottom:1rem;" />
+      <button id="loginSubmitBtn" type="button" style="background:#002244; color:#fff; padding:0.5rem 1rem; border:none; border-radius:5px; cursor:pointer;">Start Interview</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.counter.dev/script.js" 
+          data-id="9ddc8272-31df-42c6-8534-4207c1bddfb9" 
+          data-utcoffset="6">
+  </script>
+
+  <script src="script.js" defer></script>
+
+  <footer>
+    <p>© 2025 AI VISA Interview Prep. Made with 💖 by Sri Ram</p>
   </footer>
 </body>
 </html>
